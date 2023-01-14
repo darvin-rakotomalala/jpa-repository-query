@@ -1,0 +1,267 @@
+{
+	"info": {
+		"_postman_id": "7c7d8cfb-0067-4b9b-9efc-4a5fdd8d36dc",
+		"name": "jpaDerivedQuery",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "find by field",
+			"item": [
+				{
+					"name": "findByLevel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField?level=-1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/isPublished",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"isPublished"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByLevelIs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/levelIs?level=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"levelIs"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByLevelEquals",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/levelEquals?level=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"levelEquals"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByLevelNot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/levelNot?level=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"levelNot"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByLevelIsNot",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/byField/levelIsNot?level=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"byField",
+								"levelIsNot"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "find by multiple Columns",
+			"item": [
+				{
+					"name": "findByLevelAndPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/multipleColumns/byLevelAndPublished?level=3&published=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"multipleColumns",
+								"byLevelAndPublished"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "3"
+								},
+								{
+									"key": "published",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByTitleOrDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/multipleColumns/byTitleOrDescription?title=Hibernate&description=Spring Data Description",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"multipleColumns",
+								"byTitleOrDescription"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Hibernate"
+								},
+								{
+									"key": "description",
+									"value": "Spring Data Description"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findByTitleAndPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/multipleColumns/byTitleAndPublished?title=Hibernate&published=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"multipleColumns",
+								"byTitleAndPublished"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Hibernate"
+								},
+								{
+									"key": "published",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
