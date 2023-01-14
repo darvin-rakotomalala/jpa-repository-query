@@ -1,4 +1,4 @@
-##  Spring Boot | Derived Query | JPA
+##  Spring Data JPA | Derived Query
 Dans ce repo, nous allons voir comment implémenter la requête Spring Data JPA Repository dans Spring Boot avec les méthodes Derived Query.
 
 ### Technologies
