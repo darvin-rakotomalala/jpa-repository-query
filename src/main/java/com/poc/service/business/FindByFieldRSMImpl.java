@@ -26,7 +26,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getTutorialByLevel : {} : {}", e.getMessage(), e);
+            log.error("Error getTutorialByLevel : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -37,7 +37,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             log.info("----- getTutorialByPublished : {}", isPublished);
             return tutorialRepository.findByPublished(isPublished);
         } catch (Exception e) {
-            log.error("Error getTutorialByPublished : {} : {}", e.getMessage(), e);
+            log.error("Error getTutorialByPublished : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -51,7 +51,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getTutorialByLevelIs : {} : {}", e.getMessage(), e);
+            log.error("Error getTutorialByLevelIs : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -65,7 +65,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getTutorialByLevelEquals : {} : {}", e.getMessage(), e);
+            log.error("Error getTutorialByLevelEquals : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -79,7 +79,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getTutorialByLevelNot : {} : {}", e.getMessage(), e);
+            log.error("Error getTutorialByLevelNot : {} {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -93,7 +93,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getTutorialByLevelIsNot : {} : {}", e.getMessage(), e);
+            log.error("Error getTutorialByLevelIsNot : {} {}", e.getMessage(), e);
             throw e;
         }
     }
