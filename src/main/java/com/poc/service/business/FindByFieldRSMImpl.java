@@ -1,13 +1,12 @@
 package com.poc.service.business;
 
-import com.poc.exception.ErrorsEnum;
-import com.poc.exception.FunctionalException;
 import com.poc.model.domain.Tutorial;
 import com.poc.repository.TutorialRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 
 @Slf4j
@@ -24,7 +23,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             if (level >= 0) {
                 return tutorialRepository.findByLevel(level);
             }
-            throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
+            return Collections.emptyList();
         } catch (Exception e) {
             log.error("Error getTutorialByLevel : {} {}", e.getMessage(), e);
             throw e;
@@ -49,7 +48,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             if (level >= 0) {
                 return tutorialRepository.findByLevelIs(level);
             }
-            throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
+            return Collections.emptyList();
         } catch (Exception e) {
             log.error("Error getTutorialByLevelIs : {} {}", e.getMessage(), e);
             throw e;
@@ -63,7 +62,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             if (level >= 0) {
                 return tutorialRepository.findByLevelEquals(level);
             }
-            throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
+            return Collections.emptyList();
         } catch (Exception e) {
             log.error("Error getTutorialByLevelEquals : {} {}", e.getMessage(), e);
             throw e;
@@ -77,7 +76,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             if (level >= 0) {
                 return tutorialRepository.findByLevelNot(level);
             }
-            throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
+            return Collections.emptyList();
         } catch (Exception e) {
             log.error("Error getTutorialByLevelNot : {} {}", e.getMessage(), e);
             throw e;
@@ -91,7 +90,7 @@ public class FindByFieldRSMImpl implements FindByFieldRSM {
             if (level >= 0) {
                 return tutorialRepository.findByLevelIsNot(level);
             }
-            throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
+            return Collections.emptyList();
         } catch (Exception e) {
             log.error("Error getTutorialByLevelIsNot : {} {}", e.getMessage(), e);
             throw e;

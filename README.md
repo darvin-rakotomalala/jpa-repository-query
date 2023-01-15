@@ -15,6 +15,8 @@ Dans ce repo, nous allons voir comment implémenter la requête Spring Data JPA 
 ---
 - JPA find by field
 - JPA find by multiple Columns
+- JPA Like Query
+- JPA Boolean Query
 - 
 
 ### Exécuter et tester les APIs

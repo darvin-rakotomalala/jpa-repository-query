@@ -6,6 +6,126 @@
 	},
 	"item": [
 		{
+			"name": "crud",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/saveAll",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"saveAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "find by field",
 			"item": [
 				{
@@ -14,7 +134,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8081/tutorials/byField?level=-1",
+							"raw": "http://localhost:8081/tutorials/byField?level=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -27,7 +147,7 @@
 							"query": [
 								{
 									"key": "level",
-									"value": "-1"
+									"value": "1"
 								}
 							]
 						}
@@ -256,6 +376,255 @@
 									"key": "published",
 									"value": "true"
 								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Like Query",
+			"item": [
+				{
+					"name": "getByTitleLike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/likeQuery/byTitleLike?title=Spring Data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"likeQuery",
+								"byTitleLike"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Spring Data"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleStartingWith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/likeQuery/byTitleStartingWith?title=Spring",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"likeQuery",
+								"byTitleStartingWith"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Spring"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleEndingWith",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/likeQuery/byTitleEndingWith?title=ot",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"likeQuery",
+								"byTitleEndingWith"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "ot"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleContaining",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/likeQuery/byTitleContaining?title=at",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"likeQuery",
+								"byTitleContaining"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "at"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleContainingOrDescriptionContaining",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/likeQuery/byTitleContainingOrDescriptionContaining?title=boot&description=ring",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"likeQuery",
+								"byTitleContainingOrDescriptionContaining"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "boot"
+								},
+								{
+									"key": "description",
+									"value": "ring"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleContainingAndPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/likeQuery/byTitleContainingAndPublished?title=ring&published=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"likeQuery",
+								"byTitleContainingAndPublished"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "ring"
+								},
+								{
+									"key": "published",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleContainingIgnoreCase",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/likeQuery/byTitleContainingIgnoreCase?title=dat",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"likeQuery",
+								"byTitleContainingIgnoreCase"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "dat"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BooleanQuery",
+			"item": [
+				{
+					"name": "getByPublishedTrue",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/booleanQuery/byPublishedTrue",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"booleanQuery",
+								"byPublishedTrue"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByPublishedFalse",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/booleanQuery/byPublishedFalse",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"booleanQuery",
+								"byPublishedFalse"
 							]
 						}
 					},
