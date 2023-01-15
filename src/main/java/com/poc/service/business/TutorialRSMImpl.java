@@ -30,7 +30,7 @@ public class TutorialRSMImpl implements TutorialRSM {
             }
             return optionalNote.get();
         } catch (Exception e) {
-            log.error("Error getTutorialById : {}", e.getMessage());
+            log.error("Error getTutorialById : {} : {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -45,7 +45,7 @@ public class TutorialRSMImpl implements TutorialRSM {
                 return tutorialRepository.findByTitleContainingIgnoreCase(title, pageable);
             }
         } catch (Exception e) {
-            log.error("Error getAllTutorialsByTitle : {}", e.getMessage());
+            log.error("Error getAllTutorialsByTitle : {} : {}", e.getMessage(), e);
             throw e;
         }
     }

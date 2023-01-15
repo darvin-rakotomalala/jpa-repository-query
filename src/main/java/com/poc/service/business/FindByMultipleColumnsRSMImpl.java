@@ -27,7 +27,7 @@ public class FindByMultipleColumnsRSMImpl implements FindByMultipleColumnsRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getByLevelAndPublished : {}", e.getMessage());
+            log.error("Error getByLevelAndPublished : {} : {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -41,7 +41,7 @@ public class FindByMultipleColumnsRSMImpl implements FindByMultipleColumnsRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getByTitleOrDescription : {}", e.getMessage());
+            log.error("Error getByTitleOrDescription : {} : {}", e.getMessage(), e);
             throw e;
         }
     }
@@ -55,7 +55,7 @@ public class FindByMultipleColumnsRSMImpl implements FindByMultipleColumnsRSM {
             }
             throw new FunctionalException(ErrorsEnum.ERR_MCS_TUTORIAL_PARAM_NOT_VALID.getErrorMessage());
         } catch (Exception e) {
-            log.error("Error getByTitleContainingIgnoreCaseAndPublished : {}", e.getMessage());
+            log.error("Error getByTitleContainingIgnoreCaseAndPublished : {} : {}", e.getMessage(), e);
             throw e;
         }
     }
