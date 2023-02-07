@@ -7,9 +7,9 @@ Dans ce repo, nous allons voir comment implémenter la requête Spring Data JPA 
 - Spring Boot 2.7.7
 - Spring Data JPA
 - Lombok
+- MapStruct
 - Maven 3+
 - PostgreSQL
-- MapStruct
 
 ### Exemples réalisés
 ---
