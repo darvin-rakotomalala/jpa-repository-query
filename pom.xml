@@ -30,7 +30,7 @@
             </activation>
             <properties>
                 <socle.stage>LOCAL</socle.stage>
-                <postgresql.url>jdbc:postgresql://localhost:5432/poc_mgt_mcs</postgresql.url>
+                <postgresql.url>jdbc:postgresql://localhost:5432/poc_jpa</postgresql.url>
                 <postgresql.username>postgres</postgresql.username>
                 <postgresql.password>root</postgresql.password>
             </properties>

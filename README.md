@@ -18,6 +18,14 @@ Dans ce repo, nous allons voir comment implémenter la requête Spring Data JPA 
 - JPA find by multiple Columns
 - JPA Like Query
 - JPA Boolean Query
+- JPA Repository Query with Comparison
+  - Between (where x.field between param_1 and param_2)
+  - LessThan (where x.field < param)
+  - LessThanEqual (where x.field <= param)
+  - GreaterThan (where x.field > param)
+  - GreaterThanEqual (where x.field >= param)
+  - After (where x.dateField > param)
+  - Before (where x.dateField < param)
 - 
 
 ### Exécuter et tester les APIs
