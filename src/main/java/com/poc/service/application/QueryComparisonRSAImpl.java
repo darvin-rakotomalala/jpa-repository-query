@@ -6,6 +6,8 @@ import com.poc.service.business.QueryComparisonRSM;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -16,24 +18,28 @@ public class QueryComparisonRSAImpl implements QueryComparisonRSA {
     private final QueryComparisonRSM queryWithComparisonRSM;
     private final TutorialMapper tutorialMapper;
 
+    public static Date strDateToSimpleDate(String strDate) throws ParseException {
+        return new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(strDate);
+    }
+
     @Override
     public List<TutorialDTO> getByLevelGreaterThan(int level) {
         return tutorialMapper.toDTO(queryWithComparisonRSM.getByLevelGreaterThan(level));
     }
 
     @Override
-    public List<TutorialDTO> getByCreatedAtGreaterThanEqual(Date date) {
-        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtGreaterThanEqual(date));
+    public List<TutorialDTO> getByCreatedAtGreaterThanEqual(String date) throws ParseException {
+        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtGreaterThanEqual(strDateToSimpleDate(date)));
     }
 
     @Override
-    public List<TutorialDTO> getByCreatedAtAfter(Date date) {
-        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtAfter(date));
+    public List<TutorialDTO> getByCreatedAtAfter(String date) throws ParseException {
+        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtAfter(strDateToSimpleDate(date)));
     }
 
     @Override
-    public List<TutorialDTO> getByCreatedAtBefore(Date date) {
-        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtBefore(date));
+    public List<TutorialDTO> getByCreatedAtBefore(String date) throws ParseException {
+        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtBefore(strDateToSimpleDate(date)));
     }
 
     @Override
@@ -47,8 +53,8 @@ public class QueryComparisonRSAImpl implements QueryComparisonRSA {
     }
 
     @Override
-    public List<TutorialDTO> getByCreatedAtBetween(Date start, Date end) {
-        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtBetween(start, end));
+    public List<TutorialDTO> getByCreatedAtBetween(String start, String end) throws ParseException {
+        return tutorialMapper.toDTO(queryWithComparisonRSM.getByCreatedAtBetween(strDateToSimpleDate(start), strDateToSimpleDate(end)));
     }
 
 }

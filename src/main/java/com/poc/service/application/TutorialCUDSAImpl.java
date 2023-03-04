@@ -10,6 +10,9 @@ import com.poc.service.business.TutorialRSM;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -49,6 +52,12 @@ public class TutorialCUDSAImpl implements TutorialCUDSA {
     @Override
     public void deleteTutorialById(Long id) {
         tutorialCUDSM.deleteTutorialById(id);
+    }
+
+    @Override
+    public List<TutorialDTO> deleteAllByCreatedAtBefore(String outDate) throws ParseException {
+        Date outDateDelete = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss").parse(outDate);
+        return tutorialMapper.toDTO(tutorialCUDSM.deleteAllByCreatedAtBefore(outDateDelete));
     }
 
 }

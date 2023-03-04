@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -51,4 +53,11 @@ public class TutorialCUDSMImpl implements TutorialCUDSM {
             throw e;
         }
     }
+
+    @Override
+    public List<Tutorial> deleteAllByCreatedAtBefore(Date outdate) {
+        tutorialRepository.deleteAllByCreatedAtBefore(outdate);
+        return tutorialRepository.findAll();
+    }
+
 }

@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "7c7d8cfb-0067-4b9b-9efc-4a5fdd8d36dc",
+		"_postman_id": "2376b769-e259-44dd-bf9e-0c9cb3f66ec4",
 		"name": "jpaDerivedQuery",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -147,6 +147,32 @@
 							"path": [
 								"tutorials",
 								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteAllByCreatedAtBefore",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/outDate?outDate=2023-03-04 08:47:14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"outDate"
+							],
+							"query": [
+								{
+									"key": "outDate",
+									"value": "2023-03-04 08:47:14"
+								}
 							]
 						}
 					},
@@ -654,6 +680,392 @@
 								"tutorials",
 								"booleanQuery",
 								"byPublishedFalse"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QueryComparison",
+			"item": [
+				{
+					"name": "getByLevelGreaterThan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/queryComparison/byLevelGreaterThan?level=3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"queryComparison",
+								"byLevelGreaterThan"
+							],
+							"query": [
+								{
+									"key": "level",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCreatedAtGreaterThanEqual",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/queryComparison/byCreatedAtGreaterThanEqual?date=2023-03-04 08:47:14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"queryComparison",
+								"byCreatedAtGreaterThanEqual"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2023-03-04 08:47:14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCreatedAtAfter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/queryComparison/byCreatedAtAfter?date=2023-03-04 08:47:14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"queryComparison",
+								"byCreatedAtAfter"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2023-03-04 08:47:14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCreatedAtBefore",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/queryComparison/byCreatedAtBefore?date=2023-03-04 08:47:14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"queryComparison",
+								"byCreatedAtBefore"
+							],
+							"query": [
+								{
+									"key": "date",
+									"value": "2023-03-04 08:47:14"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByLevelBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/queryComparison/byLevelBetween?start=3&end=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"queryComparison",
+								"byLevelBetween"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "3"
+								},
+								{
+									"key": "end",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByLevelBetweenAndPublished",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/queryComparison/byLevelBetweenAndPublished?start=3&end=5&isPublished=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"queryComparison",
+								"byLevelBetweenAndPublished"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "3"
+								},
+								{
+									"key": "end",
+									"value": "5"
+								},
+								{
+									"key": "isPublished",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByCreatedAtBetween",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/queryComparison/byCreatedAtBetween?start=2023-03-02 08:47:14&end=2023-03-06 08:47:14",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"queryComparison",
+								"byCreatedAtBetween"
+							],
+							"query": [
+								{
+									"key": "start",
+									"value": "2023-03-02 08:47:14"
+								},
+								{
+									"key": "end",
+									"value": "2023-03-06 08:47:14"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "QuerySorting",
+			"item": [
+				{
+					"name": "getByOrderByLevel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/querySorting/orderByLevel",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"querySorting",
+								"orderByLevel"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByOrderByLevelAsc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/querySorting/orderByLevelAsc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"querySorting",
+								"orderByLevelAsc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByOrderByLevelDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/querySorting/orderByLevelDesc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"querySorting",
+								"orderByLevelDesc"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleContainingOrderByLevelDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/querySorting/titleOrderByLevelDesc?title=at",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"querySorting",
+								"titleOrderByLevelDesc"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "at"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByPublishedOrderByCreatedAtDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/querySorting/publishedOrderByCreatedAtDesc?published=true",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"querySorting",
+								"publishedOrderByCreatedAtDesc"
+							],
+							"query": [
+								{
+									"key": "published",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByTitleContainingSortByLevelDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/querySorting/titleSortByLevelDesc?title=at",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"querySorting",
+								"titleSortByLevelDesc"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "at"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getByPublishedSortByLevelDesc",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/tutorials/querySorting/publishedSortByLevelDesc?published=false",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"tutorials",
+								"querySorting",
+								"publishedSortByLevelDesc"
+							],
+							"query": [
+								{
+									"key": "published",
+									"value": "false"
+								}
 							]
 						}
 					},

@@ -30,19 +30,18 @@ public class QueryComparisonController {
     @Operation(summary = "WS used to get tutorials by CreatedAtGreaterThanEqual")
     @GetMapping("/byCreatedAtGreaterThanEqual")
     public List<TutorialDTO> getByCreatedAtGreaterThanEqual(@RequestParam(name = "date", required = true) String date) throws ParseException {
-        Date myDate = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.SSS").parse(date);
-        return queryWithComparisonRSA.getByCreatedAtGreaterThanEqual(myDate);
+        return queryWithComparisonRSA.getByCreatedAtGreaterThanEqual(date);
     }
 
     @Operation(summary = "WS used to get tutorials by CreatedAtAfter")
     @GetMapping("/byCreatedAtAfter")
-    public List<TutorialDTO> getByCreatedAtAfter(@RequestParam(name = "date", required = true) Date date) {
+    public List<TutorialDTO> getByCreatedAtAfter(@RequestParam(name = "date", required = true) String date) throws ParseException {
         return queryWithComparisonRSA.getByCreatedAtAfter(date);
     }
 
     @Operation(summary = "WS used to get tutorials by CreatedAtBefore")
     @GetMapping("/byCreatedAtBefore")
-    public List<TutorialDTO> getByCreatedAtBefore(@RequestParam(name = "date", required = true) Date date) {
+    public List<TutorialDTO> getByCreatedAtBefore(@RequestParam(name = "date", required = true) String date) throws ParseException {
         return queryWithComparisonRSA.getByCreatedAtBefore(date);
     }
 
@@ -66,8 +65,8 @@ public class QueryComparisonController {
     @Operation(summary = "WS used to get tutorials by CreatedAtBetween")
     @GetMapping("/byCreatedAtBetween")
     public List<TutorialDTO> getByCreatedAtBetween(
-            @RequestParam(name = "start", required = true) Date start,
-            @RequestParam(name = "end", required = true) Date end) {
+            @RequestParam(name = "start", required = true) String start,
+            @RequestParam(name = "end", required = true) String end) throws ParseException {
         return queryWithComparisonRSA.getByCreatedAtBetween(start, end);
     }
 

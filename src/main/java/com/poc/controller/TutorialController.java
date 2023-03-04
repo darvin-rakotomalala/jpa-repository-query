@@ -13,6 +13,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
+import java.text.ParseException;
 import java.util.List;
 
 @RequiredArgsConstructor
@@ -68,6 +69,13 @@ public class TutorialController {
     public String deleteTutorialById(@PathVariable("id") Long id) {
         tutorialCUDSA.deleteTutorialById(id);
         return "Tutorial with id " + id + " deleted successfully !";
+    }
+
+    @Operation(summary = "WS used to delete Tutorials by out date")
+    @DeleteMapping("/outDate")
+    public List<TutorialDTO> deleteAllByCreatedAtBefore(
+            @RequestParam(name = "outDate", required = true) String outDate) throws ParseException {
+        return tutorialCUDSA.deleteAllByCreatedAtBefore(outDate);
     }
 
 }
